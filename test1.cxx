@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cassert>
+#include <sys/wait.h>
 
 using namespace std;
 
@@ -16,6 +17,18 @@ int main() {
 	cout << "new status: " << x << endl;
 	assert(x == 1);
     cout << "===== SUCCESS =====" << endl;
+    register_process();
+    pid_t pid = fork();
+    if(pid == 0){
+        //register_process();
+        std::cin >> x;
+    }
+    else{
+        int a;
+        //wait(&a);
+        
+    }
+    std::cin >> x;
     return 0;
 }
 

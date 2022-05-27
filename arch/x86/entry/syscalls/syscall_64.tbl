@@ -340,6 +340,10 @@
 331	common	pkey_free		sys_pkey_free
 332	common	statx			sys_statx
 333 	common 	hello 			sys_hello
+334	common	set_status		sys_set_status
+335	common	get_status		sys_get_status
+336	common	register_process	sys_register_process
+337	common	get_all_cs		sys_get_all_cs
 #
 # x32-specific system call numbers start at 512 to avoid cache impact
 # for native 64-bit operation.
