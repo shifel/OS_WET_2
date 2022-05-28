@@ -299,8 +299,8 @@ extern struct cred init_cred;
 	INIT_LIVEPATCH(tsk)						\
 	INIT_TASK_SECURITY						\
 	.facultie	= 0,						\
-	.important_list = LIST_HEAD_INIT(init_task.important_list),		\
-	.this_head	= LIST_HEAD_INIT(init_task.this_head)			\
+	.important_list = NULL,		\
+	.this_head	= { 0 }			\
 }
 
 
